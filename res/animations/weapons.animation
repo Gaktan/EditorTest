@@ -1,0 +1,32 @@
+{
+	"animations" : [{
+			"name" : "fist_idle",
+			"frames" : [0],
+			"delays" : [-1]
+		}, {
+			"name" : "fist_fire",
+			"frames" : [1, 2, 3, 2, 1, 0],
+			"delays" : [75, 75, 75, 75, 75, 100]
+		},
+		{
+			"name" : "revolver_idle",
+			"frames" : [0],
+			"delays" : [-1]
+		},
+		{
+			"name" : "revolver_fire",
+			"frames" : [1, 2, 3, 4, 0],
+			"delays" : [75, 75, 75, 75, 100]
+		},
+		{
+			"name" : "shotgun_idle",
+			"frames" : [0],
+			"delays" : [-1]
+		},
+		{
+			"name" : "shotgun_fire",
+			"frames" : [1, 2, 3, 4, 5, 4, 3, 0],
+			"delays" : [100, 100, 100, 150, 200, 250, 200, 300]
+		},
+	]
+}

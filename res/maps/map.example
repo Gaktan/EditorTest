@@ -1,0 +1,90 @@
+{
+	"name" : (map name),
+	"width" : (int),
+	"height" : (int),
+	"start" : {
+		"x" : (float),
+		"y" : (float)
+	},
+	"sky" : {
+		"down" : {
+			"r" : (int / 255),
+			"g" : (int / 255),
+			"b" : (int / 255)
+		}
+		"up" : { // example
+			"r" : 255,
+			"g" : 0,
+			"b" : 255
+		}
+	},
+	"walls" : [{ // This must be an array
+			"char" : (char) to be represented in the map data,
+			"texture" : (string) texture name,
+			"solid" : boolean
+		}, { // example
+			"char" : "O",
+			"texture" : "wall.png",
+			"solid" : true
+		}
+	],
+	"billboards" : [{ // Same as walls
+			"char" : "X",
+			"texture" : "pillar.png",
+			"solid" : true
+		}
+	],
+	"doors" : [{
+			"char" : (char) to be represented in the map data,
+			"texture" : (string) texture name,
+			"texture_side" : (string) side wall texture,
+			"open_direction" : { // Open door position relative to the 
+				"x" : (float),
+                "y" : (float),
+                "z" : (float)
+			},
+			"scale": { // Door scale
+                "x" : (float),
+                "y" : (float),
+                "z" : (float)
+            },
+			"time" : 1000
+		}, {
+			"char" : "|",
+			"texture" : "missing_door.png", // Missing texture will be displayed with in magenta and black, "none" for no texture
+			"texture_side" : "door_side.png",
+			"open_direction" : { // Missing parameters will have a default value of 0 for numbers
+				"z" : 0.95
+			},
+			"scale": { // Default value is 1
+                "z" : 0.1
+            },
+			"time" : 350
+		}
+	],
+    // '\r\n', '\n', and '\t' will be replaced. Anything else will count as a character.
+    // Total amount of character must be equal to width * height
+    // It is highly recommended to enclose the map completely
+	"map" : "
+		OOOOOOOOOOOOOOOOOOOO
+		OX                 O
+		O     OO  OO  OO   O
+		O     OO  OO  OO   O
+		O     O        O   O
+		O X   |   XX   OX XO
+		OOO-O-OO OOOO OOO_OO
+		O               X XO
+		O                  O
+		O    A             O
+		U    O    OXO  O   O
+		O         O    O   O
+		O         OOOAAO   O
+		U     X            O
+		O                  O
+		O          X X  O  O
+		U   W       X OOOO O
+		O          X X  O  O
+		O                  O
+		OOOOOUOOOOOOOOOOOOOO
+		"
+}

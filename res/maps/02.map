@@ -1,0 +1,118 @@
+{
+	"name" : "map02",
+	"width" : 40,
+	"height" : 40,
+	"start" : {
+		"x" : 2,
+		"y" : 18
+	},
+	"sky" : {
+		"down" : {
+			"r" : 237,
+			"g" : 157,
+			"b" : 95
+		}
+		"up" : {
+			"r" : 252,
+			"g" : 231,
+			"b" : 227
+		}
+	},
+	"walls" : [{
+			"char" : "O",
+			"texture" : "wall.png",
+			"solid" : true
+		}, {
+			"char" : "U",
+			"texture" : "wall_portrait.png",
+			"solid" : true
+		}, {
+			"char" : "A",
+			"texture" : "wall_hole.png",
+			"solid" : false
+		}
+	],
+	"billboards" : [{
+			"char" : "X",
+			"texture" : "pillar.png",
+			"solid" : true
+		}
+	],
+	"doors" : [{
+			"char" : "-",
+			"texture" : "door.png",
+			"texture_side" : "door_side.png",
+			"open_direction" : {
+				"x" : -0.95
+			},
+			"scale": {
+                "z" : 0.1
+            },
+			"time" : 1000
+		}, {
+			"char" : "|",
+			"texture" : "missing_door.png",
+			"texture_side" : "door_side.png",
+			"open_direction" : {
+				"z" : 0.95
+			},
+			"scale": {
+                "x" : 0.75,
+            },
+			"time" : 350
+		}{
+			"char" : "_",
+			"texture" : "pillar.png",
+			"texture_side" : "wall.png",
+			"open_direction" : {
+				"y" : -0.95
+			},
+			"scale": {
+                "z" : 0.1
+            },
+			"time" : 1000
+		},
+	],
+	"map" : "
+OOOOOOOOOOOOOOOOOOOOOOOOOOO             
+OX                         OOO          
+O     OO  OO  OO              OO        
+O     OO  OO  OO                O       
+O     O        O                 O      
+O     |   XX   OX XO              OO    
+OOO  OOO OOOO OOO_OOO               O   
+O               X XO O               O  
+O                  O  O              O  
+O    A             O                 O  
+U    O    OXO  O   OOO OUOOOOOOOO  OOO  
+O         O    O   O  O         O  O    
+O         OOOAAO   O            O  O    
+U     X            O            O  O    
+O                  O            O  O    
+O          X X  O  O            O  O    
+U   W       X OOOO O            O  O    
+O           X   O  O            O  O    
+O                  O            O  O    
+O                  O            O  O    
+OOOO      OOOOO   OOOOOOOOOOOOOOO  OOOOO
+OX                 |          OOO  O  OO
+O     OO  OO  OO   O               O   O
+O     OO  OO  OO   O OOOOO   OOOOOOO  OO
+O     O        O   O                   O
+O X   |   XX   OX XO                   O
+OOO-O-OO OOOO OOO_OO                   O
+O                  O                   O
+O                  |                   O
+O                  O                   O
+OOOOOOOOOOOOOOOOOOOOOOOO  OOOOOO-OOOOOOO
+                    O         O    O   O
+                    O         OOOAAO   O
+                    U     X            O
+                    O                  O
+                    O          X X  O  O
+                    U   W       X OOOO O
+                    OOO         X   O  O
+                    O O                O
+                    OOOOOUOOOOOOOOOOOOOO
+	"
+}
